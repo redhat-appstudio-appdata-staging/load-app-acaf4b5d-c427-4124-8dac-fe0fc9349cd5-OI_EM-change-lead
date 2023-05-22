@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-python-basic-ywpj
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-python-basic-ywpj
+    app.kubernetes.io/part-of: load-app-acaf4b5d-c427-4124-8dac-fe0fc9349cd5
+  name: devfile-sample-python-basic-ywpj
+spec:
+  ports:
+  - port: 8081
+    targetPort: 8081
+  selector:
+    app.kubernetes.io/instance: devfile-sample-python-basic-ywpj
+status:
+  loadBalancer: {}
